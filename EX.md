@@ -1,5 +1,8 @@
-
+```mermaid
 graph TD
+classDef CoralEdge stroke:#00CED1,stroke-width:4px
+
+
     Bangkok -->|10| Nonthaburi
     Bangkok -->|15| PathumThani
     Bangkok -->|80| Ayutthaya
