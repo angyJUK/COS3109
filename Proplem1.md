@@ -2,12 +2,23 @@
 **ตัวอย่างการวาด "Tree"**
 
 ```mermaid
-flowchart TD
-    a["a\nh=4"] -->|1| b["b\nh=3"]
-    a -->|3| c["c\nh=2"]
-    b -->|1| c_2["c\nh=2"]
-    b -->|3| d["d\nh=1"]
-    c -->|1| d_2["d\nh=1"]
-    c -->|3| g["g\nh=0"]
-    d -->|1| g_2["g\nh=0"]
-    d_2 -->|1| g_3["g\nh=0"]
+flowchart TB
+classDef CoralEdge stroke:#00CED1,stroke-width:4px
+
+a((a)) -->|1| b((b))
+a((a)) -->|3| c((c))
+
+b((b)) -->|1| cb((c))
+b((b)) -->|3| db((d))
+
+c((c)) -->|1| dc((d))
+c((c)) -->|3| gc((g))
+
+dc((d)) -->|1| gdc((g))
+
+cb((c))-->|1| dcb((d))
+cb((c)) -->|3| gcb((g))
+
+db((d)) -->|1| gd((g))
+
+dcb((d)) -->|1| gdcb((g))
